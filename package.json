@@ -1,0 +1,15 @@
+{
+  "name": "stock-master-pern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "missing": "^0.0.1",
+    "react-spring": "^9.7.3"
+  }
+}
