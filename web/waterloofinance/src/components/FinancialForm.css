@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000; /* Set background to black */
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://example.com/cool-space-background.jpg') no-repeat center center fixed; /* Replace with your space background image URL */
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  .container {
+    background: rgba(0, 0, 0, 0.8); /* Change the background color to black with some transparency */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 500px;
+  }
+  
+  .financial-form {
+    padding: 20px;
+  }
+  
+  .form-title, .title, .label, .square, .input, .submit-btn {
+    color: #ffd700; /* Set text color to gold */
+  }
+  
+  .form-title, .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .square-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .square {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ffd700; /* Set border color to gold */
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .square:hover {
+    background-color: #ffd700; /* Set background color to gold on hover */
+    color: #000; /* Set text color to black on hover */
+  }
+  
+  .square.selected {
+    background-color: #ffd700; /* Set background color to gold when selected */
+    color: #000; /* Set text color to black when selected */
+  }
+  
+  .input, .submit-btn {
+    background-color: #ffd700; /* Set background color to gold */
+    color: #000; /* Set text color to black */
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .input:hover, .input:focus, .submit-btn:hover {
+    transform: translateY(-5px);
+  }
+  
+  .slider-container {
+    position: relative;
+    height: 10px;
+    background: #ffd700; /* Set background color to gold */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+  
+  .slider-fill {
+    height: 100%;
+    background: linear-gradient(to right, #ffd700, #ffd700); /* Set gradient colors to gold */
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out, background 0.3s ease-in-out; /* Add transition to background */
+  }
+  
+  .submit-btn {
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background: #ffd700; /* Set background color to gold on hover */
+    color: #000; /* Set text color to black on hover */
+  }
+  
+  /* Additional Animations */
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+  
