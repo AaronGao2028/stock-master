@@ -20,5 +20,7 @@ def load_historical_date (cur, stocks, ticker):
             price = stocks.loc[i, "Open"]
             date = stocks.loc[i, "Date"]
             cur.execute(f"INSERT INTO {ticker} VALUES ('{date}', {price})")
+            
+    cur.commit
 
 

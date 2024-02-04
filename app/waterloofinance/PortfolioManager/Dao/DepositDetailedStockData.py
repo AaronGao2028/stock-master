@@ -81,6 +81,16 @@ def load_detailed_stock_date (cur, ticker, info):
     except:
         revenue_per_share = -999
         
+    try:
+        sharesOutstanding = info["sharesOutstanding"]
+    except: 
+        sharesOutstanding = -999
+        
+    try:
+        shareTurnover = volume/sharesOutstanding
+    except:
+        shareTurnover = -999
+        
     if (pd.isna(std)):
         standard_deviation = -999
         sharpe_ratio = -999
@@ -91,9 +101,9 @@ def load_detailed_stock_date (cur, ticker, info):
     cur.execute(f"SELECT EXISTS(SELECT 1 FROM stocks WHERE ticker='{ticker}')")
     ticker_exist = cur.fetchall()
 
-    if (ticker_exist):
-        cur.execute(f"UPDATE stocks SET price = {price}, marketcap = {marketcap}, dividend_yield = {dividend_yield}, pe = {pe}, beta = {beta}, sector = '{sector}', industry = '{industry}', volume = {volume}, payout_ratio = {payout_ratio}, peg_ratio = {peg_ratio}, revenue_per_share = {revenue_per_share}, standard_deviation = {standard_deviation}, sharpe_ratio = {sharpe_ratio} WHERE ticker = '{ticker}'")
+    if (ticker_exist[0][0]): 
+        cur.execute(f"UPDATE stocks SET price = {price}, marketcap = {marketcap}, dividend_yield = {dividend_yield}, pe = {pe}, beta = {beta}, sector = '{sector}', industry = '{industry}', volume = {volume}, payout_ratio = {payout_ratio}, peg_ratio = {peg_ratio}, revenue_per_share = {revenue_per_share}, standard_deviation = {standard_deviation}, sharpe_ratio = {sharpe_ratio}, shares_outstanding = {sharesOutstanding}, share_turnover = {shareTurnover} WHERE ticker = '{ticker}'")
     else:
-        cur.execute(f"INSERT INTO stocks VALUES ('{ticker}', '{name}', {price}, {marketcap}, {dividend_yield}, {pe}, {beta}, '{sector}', '{industry}', {volume}, {payout_ratio}, {peg_ratio}, {revenue_per_share}, {standard_deviation}, {sharpe_ratio})")
+        cur.execute(f"INSERT INTO stocks VALUES ('{ticker}', '{name}', {price}, {marketcap}, {dividend_yield}, {pe}, {beta}, '{sector}', '{industry}', {volume}, {payout_ratio}, {peg_ratio}, {revenue_per_share}, {standard_deviation}, {sharpe_ratio}, {sharesOutstanding}, {shareTurnover})")
 
 

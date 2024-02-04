@@ -9,8 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^11.0.3",
     "missing": "^0.0.1",
     "react": "^18.2.0",
-    "react-spring": "^9.7.3"
+    "react-spring": "^9.7.3",
+    "vite": "^5.0.12"
   }
 }
