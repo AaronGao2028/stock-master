@@ -164,6 +164,7 @@ def get_form_data():
             # Standard Deviation
             new_portfolio.append(s[13])
             # Sharpe Ratio
+            print(s[14])
             new_portfolio.append(s[14])
             # Allocation
             new_portfolio.append(s[19])

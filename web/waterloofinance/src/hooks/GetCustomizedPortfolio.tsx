@@ -1,28 +1,15 @@
 import {
-  HStack,
   Heading,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
-  Tfoot,
   Th,
   Thead,
   Tr,
   VStack,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import {
-  PieChart,
-  Pie,
-  Tooltip,
-  BarChart,
-  XAxis,
-  YAxis,
-  Legend,
-  CartesianGrid,
-  Bar,
-} from "recharts";
+import { PieChart, Pie, Tooltip } from "recharts";
 import "chart.js";
 
 const GetCustomizedPortfolio = () => {
@@ -134,14 +121,14 @@ const GetCustomizedPortfolio = () => {
                   ${Math.round(marketcaps[index] * 100) / 100}
                 </Th>
                 <Th fontSize={14}>
-                  ${Math.round(dividends[index] * 100) / 100}
+                  {Math.round(dividends[index] * 10000) / 100}%
                 </Th>
                 <Th fontSize={14}>{sectors[index]}</Th>
                 <Th fontSize={14}>
-                  ${Math.round(deviations[index] * 100) / 100}
+                  {Math.round(deviations[index] * 10000) / 100}%
                 </Th>
                 <Th fontSize={14}>
-                  ${Math.round(sharperatios[index] * 100) / 100}
+                  {Math.round(sharperatios[index] * 100) / 100}
                 </Th>
                 <Th fontSize={14}>
                   {Math.round(allocations[index] * 10000) / 100}%

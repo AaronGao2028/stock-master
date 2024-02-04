@@ -67,7 +67,7 @@ const FinancialForm = () => {
         sliderValue,
       ]),
     });
-    window.open("http://127.0.0.1:5175/custom-portfolio");
+    window.open("http://127.0.0.1:5173/custom-portfolio");
   };
 
   return (
