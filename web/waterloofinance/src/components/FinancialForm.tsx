@@ -17,6 +17,7 @@ import SectorSelection from "./SectorSelection";
 import MarketCapSelection from "./MarketCapSelection";
 import DividendYieldSelection from "./DividendYieldSelection";
 import ShareTurnOver from "./ShareTurnoverSelection";
+import RiskTolerationSelection from "./RiskToleranceSelection";
 
 const FinancialForm = () => {
   return (
@@ -26,6 +27,7 @@ const FinancialForm = () => {
       <MarketCapSelection />
       <DividendYieldSelection />
       <ShareTurnOver />
+      <RiskTolerationSelection />
     </VStack>
   );
 };
