@@ -1,0 +1,7 @@
+{
+    "riskmatch": 3.0,
+    "sectormatch": 2.5,
+    "marketcapmatch": 2.0,
+    "dividendmatch": 1.75,
+    "turnovermatch": 1.5
+}

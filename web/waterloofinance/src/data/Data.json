@@ -1,6 +1,6 @@
 {
     "sectors": ["Basic Materials", "Communication Services", "Consumer Cyclical", "Consumer Defensive", "Energy", "Financial Services", "Healthcare", "Industrials", "Real Estate", "Technology", "Utilities"],
-    "marketcaps": ["Micro Cap (0 - $250M)", "Small Cap (250M - $2B)", "Mid Cap ($2B - $10B)", "Large Cap ($10B - $200B)", "Mega Cap ($200B +)"],
+    "marketcaps": ["Micro Cap (0 - $250M)", "Small Cap ($250M - $2B)", "Mid Cap ($2B - $10B)", "Large Cap ($10B - $200B)", "Mega Cap ($200B +)"],
     "dividends": ["Low (0% -0.5%)", "Medium (0.5% - 3%)", "High (3% - 6%)", "Ultra High (6% +)"],
     "shareturnovers": ["Low (0% - 0.1%)", "Medium (0.1% - 0.5%)", "High (0.5% - 1.0%)", "Ultra High (1.0% +)"],
     "risklevels": ["Low (± 2% - 5%)", "Medium (± 5% - 10%)", "High (± 10% - 20%)", "Ultra High (± 20% +)"]
