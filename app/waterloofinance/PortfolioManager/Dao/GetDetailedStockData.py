@@ -18,13 +18,7 @@ def get_detailed_stock_data():
     cursor.execute(query)
 
     # Fetch all rows and convert to a list of dictionaries
-    rows = cursor.fetchall()
-    result = []
-    for row in rows:
-        d = {}
-        for i, col in enumerate(cursor.description):
-            d[col[0]] = row[i]
-            result.append(d)
+    result = list(cursor.fetchall())
 
     # Convert the list of dictionaries to JSON and print it
     json_result = json.dumps(result)
