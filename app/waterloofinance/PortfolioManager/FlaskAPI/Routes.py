@@ -131,6 +131,7 @@ def get_form_data():
         # Close the connections to the database
         cur.close()
         conn.close()
+        
         return pickle.dumps(portfolio)
     elif request.method == 'GET':   
         conn = psycopg2.connect(
