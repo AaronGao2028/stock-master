@@ -3,6 +3,7 @@ import PortfolioList from "./PortfolioList";
 import StockDistributionPieChart from "./StockDistributionPieChart";
 import PortfolioHeatMap from "./PortfolioHeatMap";
 import SectorAllocationPieChart from "./SectorAllocationPieChart";
+import HistoricalPerformanceChart from "./HistoricalPerformanceChart";
 
 const PortfolioBreakdown = () => {
   return (
@@ -10,6 +11,7 @@ const PortfolioBreakdown = () => {
       <PortfolioList />
       <PortfolioHeatMap />
       <SectorAllocationPieChart />
+      <HistoricalPerformanceChart />
     </VStack>
   );
 };

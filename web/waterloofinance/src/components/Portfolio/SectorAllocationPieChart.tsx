@@ -22,9 +22,6 @@ echarts.use([
   CanvasRenderer,
 ]);
 
-interface AppProps {}
-interface AppState {}
-
 const SectorAllocationPieChart = () => {
   const temp = GetCustomizedPortfolioData();
 
@@ -108,7 +105,7 @@ const SectorAllocationPieChart = () => {
   };
 
   return (
-    <div style={{ width: "60%", height: "100%" }}>
+    <div style={{ width: "70%", height: "100%" }}>
       <Heading>Sector Allocation</Heading>
       <ReactEChartsCore
         echarts={echarts}

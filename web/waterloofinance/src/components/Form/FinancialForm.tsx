@@ -72,7 +72,9 @@ const FinancialForm = () => {
 
   return (
     <VStack marginTop={200} width="100vw">
-      <Heading>Please your portfolio preferences</Heading>
+      <Heading marginBottom={50}>
+        Please select your portfolio preferences
+      </Heading>
       {form[index]}
       <HStack marginTop={100} spacing="50vw">
         <Button

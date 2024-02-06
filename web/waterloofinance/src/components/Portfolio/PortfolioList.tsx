@@ -34,6 +34,15 @@ const PortfolioList = () => {
   const sharperatios = temp[7]?.map((s) => parseFloat(s));
   const allocations = temp[8]?.map((s) => parseFloat(s));
 
+  const rewriteMarketcap = (marketcap) => {
+    if (marketcap >= 1000000000000) {
+      return Math.round(marketcap / 10000000000) / 100 + " T";
+    } else if (marketcap >= 1000000000) {
+      return Math.round(marketcap / 10000000) / 100 + " B";
+    } else if (marketcap >= 1000000) {
+      return Math.round(marketcap / 10000) / 100 + " M";
+    }
+  };
   return (
     <VStack marginTop={100} width={"100vw"}>
       <Heading>Customized Portfolio</Heading>
@@ -52,9 +61,7 @@ const PortfolioList = () => {
                 <Th fontSize={14}>{ticker}</Th>
                 <Th fontSize={14}>{names[index]}</Th>
                 <Th fontSize={14}>${Math.round(prices[index] * 100) / 100}</Th>
-                <Th fontSize={14}>
-                  ${Math.round(marketcaps[index] * 100) / 100}
-                </Th>
+                <Th fontSize={14}>{rewriteMarketcap(marketcaps[index])}</Th>
                 <Th fontSize={14}>
                   {Math.round(dividends[index] * 10000) / 100}%
                 </Th>
